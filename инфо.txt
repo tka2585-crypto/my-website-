@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Мир животных</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f9f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #2e8b57;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #3cb371;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #2e8b57;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Мир животных ??</h1>
+  <p>Интересные факты о животных нашей планеты</p>
+</header>
+
+<nav>
+  <a href="#about">О сайте</a>
+  <a href="#animals">Животные</a>
+  <a href="#facts">Факты</a>
+</nav>
+
+<section id="about">
+  <div class="card">
+    <h2>О сайте</h2>
+    <p>
+      Этот сайт создан для знакомства с удивительным миром животных.
+      Здесь ты найдёшь краткую информацию и интересные факты.
+    </p>
+  </div>
+</section>
+
+<section id="animals">
+  <div class="card">
+    <h2>Кошки ??</h2>
+    <p>Кошки — одни из самых популярных домашних животных в мире.</p>
+    <img src="https://via.placeholder.com/600x300" alt="Кошка">
+  </div>
+
+  <div class="card">
+    <h2>Собаки ??</h2>
+    <p>Собаки известны своей верностью и дружелюбным характером.</p>
+    <img src="https://via.placeholder.com/600x300" alt="Собака">
+  </div>
+</section>
+
+<section id="facts">
+  <div class="card">
+    <h2>Интересные факты</h2>
+    <ul>
+      <li>Сердце синего кита весит более 180 кг.</li>
+      <li>Кошки могут спать до 16 часов в сутки.</li>
+      <li>У собак лучше развито обоняние, чем у людей.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Мир животных</p>
+</footer>
+
+</body>
+</html>м
