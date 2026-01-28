@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Мир животных</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #e0f7fa, #f1f8e9);
+  color: #333;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(135deg, #1b5e20, #43a047);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+/* ===== NAV ===== */
+nav {
+  position: sticky;
+  top: 0;
+  background: #2e7d32;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 12px;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #c8e6c9;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+/* ===== CARDS ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* ===== FACTS ===== */
+.fact {
+  background: linear-gradient(135deg, #a5d6a7, #81c784);
+  color: #1b5e20;
+  padding: 25px;
+  border-radius: 20px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* ===== BUTTON ===== */
+button {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1b5e20;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #1b5e20;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* ===== ANIMATION ===== */
+.fade {
+  animation: fadeIn 1.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<header class="fade">
+  <h1>?? Мир животных</h1>
+  <p>Красота, сила и тайны живой природы</p>
+</header>
+
+<nav>
+  <a href="#about">О сайте</a>
+  <a href="#animals">Животные</a>
+  <a href="#facts">Факты</a>
+  <a href="#quiz">Мини-игра</a>
+</nav>
+
+<section id="about" class="fade">
+  <h2>?? О сайте</h2>
+  <p style="text-align:center; font-size:18px;">
+    Этот сайт посвящён удивительному миру животных.
+    Здесь ты узнаешь интересные факты, увидишь разных представителей фауны
+    и даже поиграешь в мини-игру.
+  </p>
+</section>
+
+<section id="animals">
+  <h2>?? Животные</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://via.placeholder.com/400x250" alt="">
+      <h3>Кошки ??</h3>
+      <p>Независимые, умные и очень милые животные.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x250" alt="">
+      <h3>Собаки ??</h3>
+      <p>Лучшие друзья человека, известные своей верностью.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x250" alt="">
+      <h3>Львы ??</h3>
+      <p>Короли саванны и символ силы.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x250" alt="">
+      <h3>Дельфины ??</h3>
+      <p>Одни из самых умных существ на планете.</p>
+    </div>
+  </div>
+</section>
+
+<section id="facts">
+  <h2>? Интересные факты</h2>
+  <div class="fact">?? Сердце синего кита размером с небольшой автомобиль.</div>
+  <div class="fact">?? Кошки могут издавать более 100 разных звуков.</div>
+  <div class="fact">?? Слоны узнают себя в зеркале.</div>
+</section>
+
+<section id="quiz">
+  <h2>?? Мини-игра</h2>
+  <p style="text-align:center;">Нажми кнопку и получи случайный факт!</p>
+  <div style="text-align:center;">
+    <button onclick="showFact()">Показать факт</button>
+    <p id="randomFact" style="margin-top:20px; font-size:18px;"></p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Мир животных | Сделано мной ??</p>
+</footer>
+
+<script>
+function showFact() {
+  const facts = [
+    "?? У жирафа нет голосовых связок.",
+    "?? Пингвины могут прыгать из воды на высоту до 2 метров.",
+    "?? У осьминога три сердца.",
+    "?? Совы могут поворачивать голову на 270 градусов."
+  ];
+  const random = Math.floor(Math.random() * facts.length);
+  document.getElementById("randomFact").innerText = facts[random];
+}
+</script>
+
+</body>
+</html>
